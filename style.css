@@ -1,0 +1,141 @@
+/* Global view aka Desktop view */
+*{ 
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    color: white;
+}
+a{
+    color: white;
+    text-decoration: none
+}
+.container{
+    
+    min-height: 500px;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 150px; 
+}
+.header-container{
+    background-color: dimgrey;
+    min-height: 100px;
+    
+    
+    position: fixed;
+    width: 100%;
+    
+    
+}
+.hightlight{
+    font-size: 25px;
+    color: rgb(238, 104, 193);
+}
+header{
+    max-width: 1024px;
+    min-height: 100px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav a{
+border:1px solid white;
+padding: 10px 25px;
+text-decoration: none;
+color: white;
+margin-left: 20px;
+}
+
+.col{
+    background-color: rgb(145, 128, 240);
+    width: 30%;
+    margin-bottom: 40px;
+    
+}
+.hide-desktop-only{
+    display: none;
+}
+
+.col img{
+    width: 100%;
+    height: auto;
+
+}
+p::first-line{
+    font-weight: bold;
+}
+.col p{
+    padding:10px 25px;
+}
+.mobile-wrapper{
+    display: none;
+}
+
+
+/* Tablet View */
+
+@media (max-width:768px){
+    .col{
+        width:45%;
+    }
+    .hide-desktop-only{
+        display: block;
+    }
+    .header-container{
+        position: relative;
+    }
+    /* header{
+display: block;
+text-align: center;
+
+    } */
+    .container{
+padding-top: 10px;
+    }
+    nav{
+        display: none;
+    }
+    nav a{
+        display:block;
+        margin-left:0px;
+    }
+    .logo{
+        padding: 40px 0;
+    }
+    .mobile-wrapper{
+        display: block;
+        padding-right: 30px;
+    }
+    .mob-nav{
+        display:none;
+        position: absolute;
+        padding-top: 10px;
+    }
+    .navbutton{
+        display: block;
+        background-color: orangered;
+        padding: 15px 30px;
+        margin-left: -60px;
+        text-align: center;
+    }
+    
+}
+
+
+
+
+
+/* Mobile View */
+@media (max-width: 400px){
+    .col{
+        width: 100%;
+    }
+    .hide-mobile{
+        display:none;
+    }
+}
